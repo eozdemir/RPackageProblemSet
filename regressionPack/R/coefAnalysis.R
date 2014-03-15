@@ -12,12 +12,14 @@
 #'  \item{y}{The second object input}
 #' @author Elif Ozdemir
 #' @note This function uses the fits of all possible combinations of covariates to evaluate their importance
+#' @seealso \code{\link{regAnalysis}}
+#'
 #' @examples
-#' 
 #' myX <- matrix(rnorm(30, mean=10, sd=5), ncol=3)
 #' myY <- sample(1:100, 10)
 #' model<- regAnalysis(myX, myY)
 #' coefAnalysis(model)
+#' 
 #' @rdname coefAnalysis
 #' @aliases coefAnalysis,Regression-method
 #' @export
