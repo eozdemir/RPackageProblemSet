@@ -1,0 +1,7 @@
+exportClasses(Regression)
+exportClasses(Coefficient)
+exportMethods(regAnalysis)
+exportMethods(coefAnalysis)
+exportMethods(printRegression)
+exportMethods(showRegression)
+exportMethods(plotRegression)
