@@ -8,8 +8,15 @@
 #' @seealso \code{\link{printRegression}}
 #' @rdname showRegression
 #' @note Realize that this function works in a different way than printRegression function does
+
 #' @export
-setMethod("show", "Regression", 
+setGeneric(name="showRegression",
+           def=function(object)
+           {standardGeneric("showRegression")}
+)
+
+#' @export
+setMethod("showRegression", "Regression", 
           function(object){
             cat("First 6 R-squared values: \n") #as head function
             if(length(object@Rsquare)<=6){

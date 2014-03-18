@@ -14,8 +14,14 @@ setGeneric("plot") #to make plot useable by an S4 function
 #' @seealso \code{\link{regAnalysis}}
 #' @rdname plotRegression
 #' @export
-setMethod("plot", "Regression", 
-          function(object,...){
+setGeneric(name="plotRegression",
+           def=function(object)
+           {standardGeneric("plotRegression")}
+)
+
+#' @export
+setMethod("plotRegression", "Regression", 
+          function(object){
             plot(object@y)
             abline(object@coef[length(object@coef),])
           })

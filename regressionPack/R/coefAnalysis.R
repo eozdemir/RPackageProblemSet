@@ -29,7 +29,7 @@ setGeneric(name="coefAnalysis",
 )
 
 #' @export
-setMethod(f="coefAnalysis", "Regression"
+setMethod(f="coefAnalysis", "Coefficient",
           definition=function(object){
           MeanRsquare<- apply(object@coef, 1, function(a) mean(object@Rsquare)) 
           return(new("Coefficient", MeanRsquare=MeanRsquare, coef=object@coef, Rsquare=object@Rsquare, x=object@x, y=object@y)) #first one is for the intercept

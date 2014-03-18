@@ -4,15 +4,9 @@ Version: 0.1
 Author: Elif Ozdemir
 Maintainer: Elif Ozdemir <eozdemir@wustl.edu>
 Description: Fitting regression and evaluating coefficients
-Depends: R (>= 3.0.3)
+Depends:
+    R (>= 3.0.0),
+    methods
 License: GPL (>= 2)
-LazyData: true
-Collate: 
-    'regressionPack-package.r'
-    'Regression.R'
-    'Coefficient.R'
-    'regAnalysis.R'
-    'coefAnalysis.R'
-    'showRegression.R'
-    'printRegression.R'
-    'plotRegression.R'
+Suggests:
+    devtools

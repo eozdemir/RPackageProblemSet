@@ -62,7 +62,7 @@ setMethod("getCoefficient", "Coefficient",
 )
 
 #' @export
-setMethod("getRegresiion", "Regression",
+setMethod("getRegression", "Regression",
           function(object){
             return(list(coef=object@coef,Rsquare=object@Rsquare))
           }

@@ -1,5 +1,3 @@
-setGeneric("print") #to make print useable by an S4 function
-
 #' Prints summary info for Regression class objects 
 #' 
 #' @usage print(x) 
@@ -9,9 +7,16 @@ setGeneric("print") #to make print useable by an S4 function
 #' @author Elif Ozdemir: \email{eozdemir@wustl.edu}
 #' @seealso \code{\link{showRegression}}
 #' @rdname printRegression
+#' @aliases printRegression, Regression-method
 #' @export
-setMethod("print", "Regression", 
-          function(object,...){
+setGeneric(name="printRegression",
+           def=function(object)
+           {standardGeneric("printRegression")}
+)
+
+#' @export
+setMethod("printRegression", "Regression", 
+          definition=function(object){
             cat("Number of observations:", length(object@y), "\n")
             cat("Number of regressions:", length(object@coef), "\n")
             cat("Maximum R-squared:", max(object@Rsquare), "\n")
