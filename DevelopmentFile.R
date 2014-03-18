@@ -45,15 +45,3 @@ getMethod(regAnalysis, "Regression")
 getMethod(regAnalysis, "AllRegression")
 getMethod(allRegression)
 
-
-###Come back later after this
-## Let's try it out
-x<-c(1,2)
-y<-c(3,4)
-allObj <- allSquares(x, y)
-allObj
-getSquares(allObj)
-
-## Moving between classes
-addObj <- addSquares(x,y)
-as(object=addObj, Class="AllSquares")
